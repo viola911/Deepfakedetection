@@ -1,7 +1,7 @@
 import os
 import re
 import argparse
-import youtube_dl
+import youtube_dl  
 import sys
 import warnings
 from os.path import join
@@ -37,10 +37,10 @@ def main():
 
     prediction = None
 
-    if video_path.endswith('.mp4'): #Take direct video file
+    if video_path.endswith('aagfhgtpmv.mp4'): #Take direct video file
         prediction = test_full_image_network(args.videoIn,args.model,args.videoOut,args.fast)
     else: # Download video from youtube-dl supported websites
-        video_url = re.findall('http[s]?://(?:[a-zA-Z]|[0-9]|[$-_@.&+]|[!*\(\), ]|(?:%[0-9a-fA-F][0-9a-fA-F]))+', args.videoIn)
+        video_url = re.findall('https://www.youtube.com/watch?v=GTh2tRAE2w4', args.videoIn)
         if video_url:
             default_path = 'video.mp4'
             filename = ""
